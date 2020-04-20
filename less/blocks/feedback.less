@@ -1,0 +1,139 @@
+.feedback {
+  position: absolute;
+  top: 50%;
+  margin-left: 16.77vw;
+  transform: translateY(-50%);
+  width: 382px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+
+  &::before {
+    position: absolute;
+    top: 78px;
+    left: 30px;
+    content: "";
+    display: block;
+    width: 68px;
+    height: 0.73px;
+    background-color: @main;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1170px) {
+  .feedback {
+    margin-left: auto;
+    right: 0;
+  }
+}
+
+.feedback__head {
+  .heads (@dark, 37px);
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: -0.691667px;
+  margin: 30px 0 0 30px;
+}
+
+.feedback__text {
+  width: 322px;
+  .main-text (rgba(44, 46, 63, 0.7), 200%);
+  font-size: 14px;
+  letter-spacing: -0.408333px;
+  margin: 32px 0 0 30px;
+}
+
+.feedback__author {
+  display: flex;
+  align-items: center;
+  font-family: @font-author, @font-secondary;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.466667px;
+  color: @dark;
+  margin: 35px 0 0 31px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 37.19px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 15.81px;
+    background-image: url("../img/Vlada.jpg");
+  }
+}
+
+.feedback__author--albania {
+  &::before {
+    background-image: url("../img/Marishka.jpg");
+  }
+}
+
+.feedback__author--macedonia {
+  &::before {
+    background-image: url("../img/Mikhail.jpg");
+  }
+}
+
+.feedback__author--montenegro {
+  &::before {
+    background-image: url("../img/Mei.jpg");
+  }
+}
+
+.feedback__author--croatia {
+  &::before {
+    background-image: url("../img/Vldidmir.jpg");
+  }
+}
+
+@media (max-width: @tablet-max) {
+  .feedback {
+    top: auto;
+    bottom: 0;
+    .center();
+    right: auto;
+  }
+}
+
+@media (max-width: @mobile-max) {
+  .feedback {
+    width: 268px;
+    height: 431px;
+    top: 0;
+    bottom: auto;
+
+    &::before {
+      top: 67px;
+      left: 100px;
+    }
+  }
+
+  .feedback__text {
+    width: 228px;
+    text-align: center;
+    margin: 31px 0 0 20px;
+  }
+
+  .feedback__head {
+    .heads (@dark, 24px);
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .feedback__author {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-top: 20px;
+
+    &::before {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

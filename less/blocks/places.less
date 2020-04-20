@@ -1,0 +1,246 @@
+.places__wrapper {
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 198px;
+
+  &::before {
+    position: absolute;
+    top: 190px;
+    content: "";
+    display: block;
+    width: 228.51px;
+    height: 4px;
+    background-color: @main;
+  }
+}
+
+@media (min-width: @desktop-width) and (max-width: 1170px) {
+  .places__wrapper {
+    max-width: 820px;
+  }
+}
+
+.places__head {
+  width: 358px;
+  .heads (@dark, 145%);
+  letter-spacing: -1.245px;
+}
+
+.places__text {
+  width: 328px;
+  .main-text (rgba(44, 46, 63, 0.7), 175%);
+  letter-spacing: -0.466667px;
+  margin-top: 64px;
+}
+
+.places__list {
+  max-width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  margin: 0 auto;
+  margin-top: 56px;
+}
+
+.places__list-item {
+  margin-right: 5.128%;
+  margin-bottom: 101px;
+}
+
+.places__list-item:last-child {
+  margin-left: 5.128%;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1170px) {
+  .places__list-item:nth-child(3n) {
+    margin: 0;
+  }
+}
+
+.places__anchor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 350px;
+  height: 430px;
+  font-family: @font, @font-secondary;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.415px;
+  color: @dark;
+
+  &:hover::after,
+  &:focus::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 21, 23, 0.6);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    content: "смотреть подробнее";
+    width: 266px;
+    height: 77px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    font-family: @font, @font-secondary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 127px;
+    z-index: 1;
+  }
+}
+
+.places__anchor--greece {
+  background-image: url("../img/greece.jpg");
+}
+
+.places__anchor--albania {
+  background-image: url("../img/albania.jpg");
+}
+
+.places__anchor--macedonia {
+  background-image: url("../img/macedonia.jpg");
+}
+
+.places__anchor--montenegro {
+  background-image: url("../img/montenegro.jpg");
+}
+
+.places__anchor--croatia {
+  background-image: url("../img/croatia.jpg");
+}
+
+.places__country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 63px;
+  background-color: #ffffff;
+  margin-bottom: -1px;
+  z-index: 1;
+}
+
+@media (max-width: @tablet-max) {
+  .places__wrapper {
+    margin-left: 0;
+    margin-top: 80px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .places__head {
+    width: 301px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    .center();
+  }
+
+  .places__text {
+    width: 343px;
+    text-align: center;
+    margin-top: 20px;
+    .center();
+  }
+
+  .places__list {
+    max-width: 605px;
+    margin-top: 40px;
+  }
+
+  .places .places__list-item {
+    margin-right: 3.77%;
+    margin-bottom: 19px;
+  }
+
+  .places__list-item:last-child {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .places__list-item:nth-child(2n) {
+    margin: 0;
+  }
+
+  .places__anchor {
+    width: 288px;
+    height: 425px;
+    font-family: @font, @font-secondary;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.415px;
+    color: @dark;
+  }
+
+  .places__anchor--greece {
+    background-image: url("../img/greece-tablet.jpg");
+  }
+
+  .places__anchor--albania {
+    background-image: url("../img/albania-tablet.jpg");
+  }
+
+  .places__anchor--macedonia {
+    background-image: url("../img/macedonia-tablet.jpg");
+  }
+
+  .places__anchor--montenegro {
+    background-image: url("../img/montenegro-tablet.jpg");
+  }
+
+  .places__anchor--croatia {
+    background-image: url("../img/croatia-tablet.jpg");
+  }
+}
+
+@media (max-width: @mobile-max) {
+  .places__wrapper {
+    margin-top: 108px;
+  }
+
+  .places__head {
+    width: 288px;
+    font-size: 24px;
+  }
+
+  .places__text {
+    width: 288px;
+  }
+
+  .places__list {
+    max-width: 288px;
+    margin-top: 20px;
+  }
+
+  .places .places__list-item {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  .places__list-item:last-child {
+    margin-bottom: 0;
+  }
+}

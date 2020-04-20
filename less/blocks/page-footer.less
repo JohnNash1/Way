@@ -1,0 +1,245 @@
+.page-footer {
+  display: flex;
+  max-width: 1148px;
+  margin: 0 auto;
+  margin-top: 170px;
+}
+
+.page-footer__container {
+  position: relative;
+  padding-bottom: 12px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 189px;
+    background-color: #d7d9df;
+  }
+}
+
+.page-footer__container:nth-child(3n) {
+  &::after {
+    display: none;
+  }
+}
+
+.page-footer__container--next-tours {
+  width: 389px;
+}
+
+.page-footer__container--contacts {
+  width: 100%;
+  max-width: 390px;
+}
+
+.page-footer__container--corporate {
+  width: 100%;
+  max-width: 369px;
+}
+
+.page-footer__head {
+  .heads (#141517, 178%);
+  font-size: 18px;
+}
+
+.page-footer__tour-container {
+  display: flex;
+}
+
+.page-footer__list {
+  margin-top: 20px;
+}
+
+.page-footer__list--next-tours {
+  width: 33.3%;
+}
+
+.page-footer__list-item {
+  margin-bottom: 10px;
+}
+
+.page-footer__anchor {
+  .main-text (rgba(20, 21, 23, 0.5), 17px);
+  font-size: 14px;
+}
+
+.page-footer__contacts-item {
+  margin-bottom: 15px;
+}
+
+.page-footer__list--contacts,
+.page-footer__head--contacts {
+  margin-left: 23%;
+}
+
+.page-footer__tel {
+  .main-navigation__anchor--tel;
+  .main-text (@main, 200%);
+  margin-top: 0;
+
+  &::before {
+    background-image: url("../img/footer-phone.svg");
+    margin-top: 0;
+    margin-right: 11px;
+  }
+}
+
+.page-footer__mail {
+  .main-navigation__anchor--tel;
+  .main-text (@main, 17px);
+  font-size: 14px;
+  margin-top: 0;
+
+  &::before {
+    width: 26px;
+    height: 20px;
+    background-image: url("../img/footer-mail.svg");
+    background-size: 26px 20px;
+    margin-top: 0;
+    margin-right: 15px;
+  }
+}
+
+.page-footer__mail-short {
+  display: none;
+}
+
+.page-footer__head--corporate {
+  margin-left: 13.27%;
+}
+
+.page-footer__corporate-text {
+  max-width: 320px;
+  .main-text (rgba(20, 21, 23, 0.5), 170%);
+  font-size: 14px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+@media (max-width: 818px) {
+  .page-footer__container--contacts {
+    max-width: 332px;
+  }
+}
+
+@media (max-width: @tablet-max) {
+  .page-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1148px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 170px;
+  }
+
+  .page-footer__container:nth-child(2n) {
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-footer__container {
+    margin-bottom: 30px;
+  }
+
+  .page-footer__list--contacts,
+  .page-footer__head--contacts {
+    margin-left: 50px;
+  }
+
+  .page-footer__mail-short {
+    display: inline;
+  }
+
+  .page-footer__mail-full {
+    display: none;
+  }
+
+  .page-footer__container--corporate {
+    max-width: none;
+    border-top: 1px solid #d7d9df;
+  }
+
+  .page-footer__head--corporate {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .page-footer__corporate-text {
+    max-width: none;
+    .main-text (rgba(20, 21, 23, 0.5), 170%);
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: @mobile-max) {
+  .page-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 70px;
+    margin-left: 11px;
+    margin-right: 13px;
+  }
+
+  .page-footer__head {
+    text-align: center;
+  }
+
+  .page-footer__container {
+    margin-bottom: 0;
+    border-bottom: 1px solid #d7d9df;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-footer__container--contacts {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .page-footer__mail {
+    width: 86px;
+    margin: 0 auto;
+  }
+
+  .page-footer__list--contacts,
+  .page-footer__head--contacts {
+    margin-left: 0;
+  }
+
+  .page-footer__container--corporate {
+    border-top: none;
+    padding-left: 7px;
+  }
+
+  .page-footer__container--next-tours {
+    width: 100%;
+  }
+
+  .page-footer__tour-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-footer__list--next-tours {
+    width: 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

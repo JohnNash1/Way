@@ -1,0 +1,143 @@
+.write-us {
+  position: relative;
+  max-width: 1182px;
+  margin: 0 auto;
+}
+
+.write-us__wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 844px;
+  height: 455px;
+  background-image: url("../img/write-us-bg.jpg");
+  margin-top: 138px;
+  margin-left: 12px;
+}
+
+.write-us__form {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  width: 656px;
+  height: 315px;
+  background: #ffffff;
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+  padding: 50px 49px 49px 50px;
+}
+
+.write-us__head {
+  .heads (#141517, 128%);
+  font-size: 25px;
+  text-align: center;
+}
+
+.write-us__text {
+  .main-text (#141517, 150%);
+  margin-top: 15px;
+  text-align: center;
+}
+
+.write-us__input {
+  .purchase__input;
+  margin-top: 24px;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+}
+
+.write-us__invalid {
+  .purchase__invalid;
+  top: 129px;
+  right: 49px;
+}
+
+.write-us__input:invalid + .write-us__invalid {
+  display: inline;
+}
+
+.write-us__input--tel {
+  .purchase__input--tel;
+  margin-right: auto;
+}
+
+.write-us__input--tel:invalid + .write-us__invalid {
+  left: 50px;
+  right: auto;
+}
+
+.write-us__input--email {
+  padding-left: 15px;
+}
+
+.write-us__submit {
+  .purchase__submit;
+  margin-top: 25px;
+}
+
+@media (max-width: @tablet-max) {
+  .write-us__wrapper {
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 125px;
+  }
+
+  .write-us__form {
+    position: relative;
+    height: 311px;
+  }
+
+  .write-us__submit {
+    width: 250px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: @mobile-max) {
+  .write-us__wrapper {
+    background-image: none;
+    margin-top: 50px;
+    height: auto;
+  }
+
+  .write-us__form {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    padding: 50px 16px;
+    width: 100%;
+    height: 441px;
+    background-color: #fbf8f8;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .write-us__head,
+  .write-us__text,
+  .write-us__submit,
+  .write-us__input {
+    width: 288px;
+    margin-top: 0;
+  }
+
+  .write-us__input--tel {
+    margin-right: 0;
+  }
+
+  .write-us__invalid {
+    width: 288px;
+    top: 185px;
+    right: auto;
+  }
+
+  .write-us__input--tel:invalid + .write-us__invalid {
+    left: auto;
+  }
+
+  .write-us__input--email:invalid + .write-us__invalid {
+    top: 255px;
+    left: auto;
+  }
+}

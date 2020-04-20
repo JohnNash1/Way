@@ -1,0 +1,150 @@
+.country {
+  display: flex;
+  justify-content: space-between;
+  max-width: 899px;
+  margin-left: 9.5%;
+}
+
+.country__description {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 194px;
+    display: block;
+    width: 175px;
+    height: 2.92px;
+    background-color: @main;
+  }
+}
+
+.country__head {
+  width: 425px;
+  .heads (@dark, 164%);
+  letter-spacing: -1.245px;
+  margin-top: 95px;
+}
+
+.country__text {
+  width: 370px;
+  .main-text (rgba(44, 46, 63, 0.7), 175%);
+  letter-spacing: -0.466667px;
+  margin-top: 53px;
+}
+
+.country__image {
+  position: relative;
+  width: 430px;
+  height: 596px;
+  margin-top: 80px;
+}
+
+.country__image--greece {
+  background-image: url("../img/tour-greece.jpg");
+}
+
+.country__image--albania {
+  background-image: url("../img/tour-albania.jpg");
+}
+
+.country__image--macedonia {
+  background-image: url("../img/tour-macedonia.jpg");
+}
+
+.country__image--montenegro {
+  background-image: url("../img/tour-montenegro.jpg");
+}
+
+.country__image--croatia {
+  background-image: url("../img/tour-croatia.jpg");
+}
+
+.country__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 75px;
+  background-color: @main;
+  font-family: @font, @font-secondary;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 50px;
+  .hover();
+}
+
+@media (max-width: @tablet-max) {
+  .country {
+    flex-direction: column;
+    max-width: none;
+    margin: 0;
+  }
+
+  .country__description-wrapper {
+    margin: 0 2.6%;
+  }
+
+  .country__description {
+    &::before {
+      display: none;
+    }
+  }
+
+  .country__head {
+    width: 129px;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 33px;
+  }
+
+  .country__text {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .country__button {
+    height: 50px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .country__image {
+    width: 100%;
+    min-height: 415px;
+    height: 100%;
+    background-image: url("../img/tour-Greece-tablet.jpg");
+    background-size: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: @mobile-max) {
+  .country__description-wrapper {
+    margin: 0 4.68%;
+  }
+
+  .country__head {
+    font-size: 24px;
+    margin-top: 24px;
+  }
+
+  .country__button {
+    width: 288px;
+  }
+
+  .country__image {
+    background-image: url("../img/tour-Greece-mobile.jpg");
+    margin-top: 50px;
+  }
+}

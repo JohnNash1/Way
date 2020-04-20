@@ -1,0 +1,139 @@
+.main-navigation {
+  margin-right: 20.1%;
+}
+
+.main-navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 479px;
+}
+
+.main-navigation__list-item:nth-child(3n-1) {
+  margin-left: 8.35%;
+  margin-right: 11%;
+}
+
+.main-navigation__anchor {
+  display: block;
+  font-family: @font, @font-secondary;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: @darkest;
+  margin-top: 42px;
+}
+
+.main-navigation__anchor:hover {
+  color: @main;
+}
+
+.main-navigation__anchor--tel {
+  display: flex;
+  color: @main;
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 178%;
+  margin-top: 36px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/phone.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-top: 2px;
+    margin-right: 6px;
+  }
+}
+
+.main-navigation__close {
+  display: none;
+}
+
+@media (max-width: @tablet-max) {
+  .main-navigation {
+    width: 320px;
+    height: 568px;
+    background-color: #ffffff;
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .main-navigation--nojs {
+    height: 518px;
+    margin: 0 auto;
+  }
+
+  .main-navigation--opened {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+  }
+
+  .main-navigation--closed {
+    display: none;
+  }
+
+  .main-navigation--opened .main-navigation__close {
+    display: block;
+    .purchase__close;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .main-navigation__list {
+    flex-direction: column;
+    width: 320px;
+    margin-top: 134px;
+  }
+
+  .main-navigation__list-item:nth-child(3n-1) {
+    margin: 0;
+  }
+
+  .main-navigation__anchor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    .heads (#48494D, 140%);
+    font-size: 20px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 16px;
+    background-color: #fbf8f8;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 16px;
+    }
+  }
+
+  .main-navigation__anchor--tel {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-max) {
+  .main-navigation--opened {
+    right: auto;
+    margin: 0 auto;
+  }
+}

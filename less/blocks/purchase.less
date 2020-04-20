@@ -1,0 +1,136 @@
+.purchase {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 728px;
+  height: 444px;
+  background-color: #fbf8f8;
+}
+
+.purchase__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.purchase__text {
+  width: 237px;
+  .heads (#48494d, 170%);
+  font-size: 25px;
+  text-align: center;
+  margin-top: 72px;
+}
+
+.purchase__invalid {
+  .main-text (@main, 15px);
+  font-size: 12px;
+  position: absolute;
+  display: none;
+  width: 269px;
+  top: 149px;
+  right: 61px;
+}
+
+.purchase__input {
+  width: 270px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #d7d9df;
+  margin-top: 50px;
+  padding-left: 26px;
+
+  &::placeholder {
+    .main-text (#48494d, 17px);
+    font-size: 14px;
+  }
+
+  &:invalid {
+    border: 1px solid @main;
+  }
+}
+
+.purchase__input:invalid + .purchase__invalid {
+  display: inline;
+}
+
+.purchase__input--tel {
+  background-image: url("../img/asterisk.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 6.25px;
+}
+
+.purchase__input--email {
+  margin-top: 20px;
+  padding-left: 15px;
+}
+
+.purchase__input--email:invalid + .purchase__invalid {
+  top: 219px;
+}
+
+.purchase__submit {
+  .country__button;
+  width: 176px;
+  height: 50px;
+  border: none;
+  margin-top: 20px;
+}
+
+.purchase__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/cross.svg");
+}
+
+.purchase--opened {
+  display: flex;
+  z-index: 1;
+}
+
+@media (max-width: @mobile-max) {
+  .purchase {
+    width: 100%;
+    max-width: 450px;
+    height: 568px;
+    background-color: #ffffff;
+  }
+
+  .purchase__form {
+    padding: 0 16px;
+  }
+
+  .purchase__img {
+    display: none;
+  }
+
+  .purchase__text {
+    margin-top: 100px;
+  }
+
+  .purchase__input {
+    width: 100%;
+  }
+
+  .purchase__submit {
+    width: 288px;
+  }
+
+  .purchase__input:invalid + .purchase__invalid {
+    top: 177px;
+    left: 16px;
+    right: auto;
+    width: auto;
+  }
+
+  .purchase__input--email:invalid + .purchase__invalid {
+    top: 247px;
+  }
+}
